@@ -1,6 +1,6 @@
 {
   "name": "limitd",
-  "version": "5.10.0",
+  "version": "6.0.1",
   "description": "Daemon for rate limiting using tocket buckets.",
   "main": "index.js",
   "repository": {
@@ -18,18 +18,18 @@
   "author": "José F. Romaniello <jfromaniello@gmail.com> (http://joseoncode.com)",
   "license": "MIT",
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "dependencies": {
     "async": "^2.6.0",
     "auth0-common-logging": "auth0/auth0-common-logging#v2.18.0",
-    "auth0-instrumentation": "git://github.com/gro-intelligence/auth0-instrumentation",
+    "auth0-instrumentation": "github:auth0/auth0-instrumentation#v2.27.3",
     "cb": "^0.1.0",
     "commander": "~2.15.0",
     "js-yaml": "~3.11.0",
     "length-prefixed-stream": "~1.5.1",
     "limitd-protocol": "limitd/protocol#v2.1.0",
-    "limitdb": "^2.10.0",
+    "limitdb": "^3.0.0",
     "lodash": "~4.17.5",
     "readable-stream": "^2.3.5",
     "reconnect-net": "1.1.1",
