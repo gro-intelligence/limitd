@@ -13,7 +13,12 @@ const defaults = {
   }
 };
 
-if (!process.argv[1].match(/limitd$/)) {
+function isRunningInPm2(argv) {
+    return argv.match(/pm2\/lib\/ProcessContainer.js$/) || // cluster exec mode
+           argv.match(/pm2\/lib\/ProcessContainerFork.js$/) // fork exec mode (default)
+}
+
+if (!process.argv[1].match(/limitd$/) && !isRunningInPm2(process.argv[1])) {
   //this is when limitd is used as
   //library or when running limitd's own tests
   module.exports = _.defaults({
